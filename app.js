@@ -28,14 +28,23 @@ const http = new easyHTTP;
 
 // POST METHOD
 // Creating data
-
 const data = {
     title:'Custom Post',
     body:'This is a custom post by Ron'
 };
 
 // Creating Post
-http.post('https://jsonplaceholder.typicode.com/posts',data,function(err,post){
+// http.post('https://jsonplaceholder.typicode.com/posts',data,function(err,post){
+//     if(err){
+//         console.log(err)
+//     }
+//     else{
+//         console.log(post)
+//     }
+// })
+
+// PUT METHOD
+http.put('https://jsonplaceholder.typicode.com/posts/1',data,function(err,post){
     if(err){
         console.log(err)
     }
@@ -43,5 +52,4 @@ http.post('https://jsonplaceholder.typicode.com/posts',data,function(err,post){
         console.log(post)
     }
 })
-
 
